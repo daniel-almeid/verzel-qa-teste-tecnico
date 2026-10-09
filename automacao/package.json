@@ -1,0 +1,19 @@
+{
+  "name": "verzel-store-qa",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Automação Playwright do teste técnico QA Júnior Verzel (VZS-142)",
+  "scripts": {
+    "test": "playwright test",
+    "test:api": "playwright test --project=api",
+    "test:ui": "playwright test --project=ui",
+    "test:smoke": "playwright test --grep @smoke",
+    "typecheck": "tsc --noEmit",
+    "report": "playwright show-report"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
