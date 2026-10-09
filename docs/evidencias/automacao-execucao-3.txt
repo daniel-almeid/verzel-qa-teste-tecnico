@@ -1,0 +1,14 @@
+Evidência: saída do terminal (resumo final)
+Comando: npm test (dentro da pasta automacao) · Rodada 3, com os testes do checkout · 07/10/2026
+Resultado: 92 passed, 7 failed
+------------------------------------------------------------
+
+7 failed
+    [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT13 [BUG-001] subtotal 200,00 (limite, inclusive) 
+    [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT14 [BUG-001] subtotal 200,00 com P008 x4 
+    [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT16 [BUG-001] 200,00 + cupom: frete usa subtotal antes do desconto 
+    [api] › tests\api\calculo-carrinho.spec.ts:122:7 › Cálculo do carrinho — itens e quantidades (CA10) › CT23 [BUG-002] quantidade 6 é rejeitada com QUANTIDADE_MAXIMA_EXCEDIDA @smoke 
+    [api] › tests\api\pedidos.spec.ts:69:7 › POST /api/pedidos — cupom, itens e quantidade › CT23 [BUG-002] quantidade 6 no pedido: QUANTIDADE_MAXIMA_EXCEDIDA (CA10 vale na API) 
+    [ui] › tests\ui\carrinho.spec.ts:83:7 › Carrinho — frete › CT13 [BUG-001] CA06 subtotal exatamente R$ 200,00 tem frete grátis @smoke 
+    [ui] › tests\ui\carrinho.spec.ts:90:7 › Carrinho — frete › CT16 [BUG-001] CA08 frete grátis considera o subtotal antes do desconto 
+  92 passed (32.8s)

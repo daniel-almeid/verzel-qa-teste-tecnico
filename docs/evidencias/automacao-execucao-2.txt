@@ -1,0 +1,245 @@
+Evidência: saída do terminal (trecho com as falhas e o resumo final)
+Comando: npm test (dentro da pasta automacao) · Rodada 2, após corrigir o CT21 da vitrine · 06/10/2026
+Resultado: 77 passed, 7 failed
+------------------------------------------------------------
+
+  1) [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT13 [BUG-001] subtotal 200,00 (limite, inclusive) 
+
+    Error: frete
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1990
+
+      10 |   expect(paraCentavos(corpo.subtotal as number), 'subtotal').toBe(e.subtotal);
+      11 |   expect(paraCentavos(corpo.desconto as number), 'desconto').toBe(e.desconto);
+    > 12 |   expect(paraCentavos(corpo.frete as number), 'frete').toBe(e.frete);
+         |                                                        ^
+      13 |   expect(corpo.freteGratis, 'freteGratis').toBe(e.freteGratis);
+      14 |   expect(paraCentavos(corpo.valorFaltanteFreteGratis as number), 'valorFaltanteFreteGratis').toBe(e.faltante);
+      15 |   expect(paraCentavos(corpo.total as number), 'total').toBe(e.total);
+        at esperarResumo (C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:12:56)
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:61:7
+
+    Error Context: test-results\calculo-carrinho-Cálculo-d-d4a37-al-200-00-limite-inclusive--api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\calculo-carrinho-Cálculo-d-d4a37-al-200-00-limite-inclusive--api\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\calculo-carrinho-Cálculo-d-d4a37-al-200-00-limite-inclusive--api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  2) [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT14 [BUG-001] subtotal 200,00 com P008 x4 
+
+    Error: frete
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1990
+
+      10 |   expect(paraCentavos(corpo.subtotal as number), 'subtotal').toBe(e.subtotal);
+      11 |   expect(paraCentavos(corpo.desconto as number), 'desconto').toBe(e.desconto);
+    > 12 |   expect(paraCentavos(corpo.frete as number), 'frete').toBe(e.frete);
+         |                                                        ^
+      13 |   expect(corpo.freteGratis, 'freteGratis').toBe(e.freteGratis);
+      14 |   expect(paraCentavos(corpo.valorFaltanteFreteGratis as number), 'valorFaltanteFreteGratis').toBe(e.faltante);
+      15 |   expect(paraCentavos(corpo.total as number), 'total').toBe(e.total);
+        at esperarResumo (C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:12:56)
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:61:7
+
+    Error Context: test-results\calculo-carrinho-Cálculo-d-baf26-subtotal-200-00-com-P008-x4-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\calculo-carrinho-Cálculo-d-baf26-subtotal-200-00-com-P008-x4-api\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\calculo-carrinho-Cálculo-d-baf26-subtotal-200-00-com-P008-x4-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  3) [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT16 [BUG-001] 200,00 + cupom: frete usa subtotal antes do desconto 
+
+    Error: frete
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1990
+
+      10 |   expect(paraCentavos(corpo.subtotal as number), 'subtotal').toBe(e.subtotal);
+      11 |   expect(paraCentavos(corpo.desconto as number), 'desconto').toBe(e.desconto);
+    > 12 |   expect(paraCentavos(corpo.frete as number), 'frete').toBe(e.frete);
+         |                                                        ^
+      13 |   expect(corpo.freteGratis, 'freteGratis').toBe(e.freteGratis);
+      14 |   expect(paraCentavos(corpo.valorFaltanteFreteGratis as number), 'valorFaltanteFreteGratis').toBe(e.faltante);
+      15 |   expect(paraCentavos(corpo.total as number), 'total').toBe(e.total);
+        at esperarResumo (C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:12:56)
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:61:7
+
+    Error Context: test-results\calculo-carrinho-Cálculo-d-08b66--subtotal-antes-do-desconto-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\calculo-carrinho-Cálculo-d-08b66--subtotal-antes-do-desconto-api\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\calculo-carrinho-Cálculo-d-08b66--subtotal-antes-do-desconto-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  4) [api] › tests\api\calculo-carrinho.spec.ts:122:7 › Cálculo do carrinho — itens e quantidades (CA10) › CT23 [BUG-002] quantidade 6 é rejeitada com QUANTIDADE_MAXIMA_EXCEDIDA @smoke 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 200
+
+      122 |   test('CT23 [BUG-002] quantidade 6 é rejeitada com QUANTIDADE_MAXIMA_EXCEDIDA @smoke', async ({ api }) => {
+      123 |     const res = await api.calcular([item('P001', 6)]);
+    > 124 |     expect(res.status()).toBe(422);
+          |                          ^
+      125 |     const b = await res.json();
+      126 |     expect(b.erro.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');
+      127 |     expect(b.erro.campo).toBe('itens[0].quantidade');
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\calculo-carrinho.spec.ts:124:26
+
+    Error Context: test-results\calculo-carrinho-Cálculo-d-85098-IDADE-MAXIMA-EXCEDIDA-smoke-api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\calculo-carrinho-Cálculo-d-85098-IDADE-MAXIMA-EXCEDIDA-smoke-api\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\calculo-carrinho-Cálculo-d-85098-IDADE-MAXIMA-EXCEDIDA-smoke-api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  5) [api] › tests\api\pedidos.spec.ts:69:7 › POST /api/pedidos — cupom, itens e quantidade › CT23 [BUG-002] quantidade 6 no pedido: QUANTIDADE_MAXIMA_EXCEDIDA (CA10 vale na API) 
+
+    Error: expect(received).toBe(expected) // Object.is equality
+
+    Expected: 422
+    Received: 201
+
+      69 |   test('CT23 [BUG-002] quantidade 6 no pedido: QUANTIDADE_MAXIMA_EXCEDIDA (CA10 vale na API)', async ({ api }) => {
+      70 |     const res = await api.criarPedido({ itens: [{ produtoId: 'P001', quantidade: 6 }] });
+    > 71 |     expect(res.status()).toBe(422);
+         |                          ^
+      72 |     expect((await res.json()).erro.codigo).toBe('QUANTIDADE_MAXIMA_EXCEDIDA');
+      73 |   });
+      74 | });
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\api\pedidos.spec.ts:71:26
+
+    Error Context: test-results\pedidos-POST-api-pedidos-—-0707e--EXCEDIDA-CA10-vale-na-API--api\error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\pedidos-POST-api-pedidos-—-0707e--EXCEDIDA-CA10-vale-na-API--api\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\pedidos-POST-api-pedidos-—-0707e--EXCEDIDA-CA10-vale-na-API--api\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  6) [ui] › tests\ui\carrinho.spec.ts:92:7 › Carrinho — frete › CT13 [BUG-001] CA06 subtotal exatamente R$ 200,00 tem frete grátis @smoke 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('dd[data-valor="frete"]')
+    Expected: "Grátis"
+    Received: "R$ 19,90"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveText" locator('dd[data-valor="frete"]') with timeout 7000ms
+      - waiting for locator('dd[data-valor="frete"]')
+        18 × locator resolved to <dd data-valor="frete">R$ 19,90</dd>
+           - unexpected value "R$ 19,90"
+
+
+      93 |     await abrirCarrinhoCom(vitrine, carrinho, mochila2);
+      94 |     await expect(carrinho.resumo('subtotal')).toHaveText(brl('200,00'));
+    > 95 |     await expect(carrinho.resumo('frete')).toHaveText('Grátis');
+         |                                            ^
+      96 |     await expect(carrinho.resumo('total')).toHaveText(brl('200,00'));
+      97 |   });
+      98 |
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\ui\carrinho.spec.ts:95:44
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\carrinho-Carrinho-—-frete--33301-0-00-tem-frete-grátis-smoke-ui\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\carrinho-Carrinho-—-frete--33301-0-00-tem-frete-grátis-smoke-ui\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\carrinho-Carrinho-—-frete--33301-0-00-tem-frete-grátis-smoke-ui\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\carrinho-Carrinho-—-frete--33301-0-00-tem-frete-grátis-smoke-ui\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\carrinho-Carrinho-—-frete--33301-0-00-tem-frete-grátis-smoke-ui\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7) [ui] › tests\ui\carrinho.spec.ts:99:7 › Carrinho — frete › CT16 [BUG-001] CA08 frete grátis considera o subtotal antes do desconto 
+
+    Error: expect(locator).toHaveText(expected) failed
+
+    Locator:  locator('dd[data-valor="frete"]')
+    Expected: "Grátis"
+    Received: "R$ 19,90"
+    Timeout:  7000ms
+
+    Call log:
+      - Expect "toHaveText" locator('dd[data-valor="frete"]') with timeout 7000ms
+      - waiting for locator('dd[data-valor="frete"]')
+        18 × locator resolved to <dd data-valor="frete">R$ 19,90</dd>
+           - unexpected value "R$ 19,90"
+
+
+      101 |     await carrinho.aplicarCupom(CUPONS.valido);
+      102 |     await expect(carrinho.resumo('desconto')).toContainText('20,00');
+    > 103 |     await expect(carrinho.resumo('frete')).toHaveText('Grátis');
+          |                                            ^
+      104 |     await expect(carrinho.resumo('total')).toHaveText(brl('180,00'));
+      105 |   });
+      106 |
+        at C:\Users\Daniel\Desktop\verzel-qa-test\automacao\tests\ui\carrinho.spec.ts:103:44
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results\carrinho-Carrinho-—-frete--b3f6e--subtotal-antes-do-desconto-ui\test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results\carrinho-Carrinho-—-frete--b3f6e--subtotal-antes-do-desconto-ui\video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: test-results\carrinho-Carrinho-—-frete--b3f6e--subtotal-antes-do-desconto-ui\error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    test-results\carrinho-Carrinho-—-frete--b3f6e--subtotal-antes-do-desconto-ui\trace.zip
+    Usage:
+
+        npx playwright show-trace test-results\carrinho-Carrinho-—-frete--b3f6e--subtotal-antes-do-desconto-ui\trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+  7 failed
+    [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT13 [BUG-001] subtotal 200,00 (limite, inclusive) 
+    [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT14 [BUG-001] subtotal 200,00 com P008 x4 
+    [api] › tests\api\calculo-carrinho.spec.ts:58:9 › Cálculo do carrinho — frete, cupom e arredondamento (tabela de decisão) › CT16 [BUG-001] 200,00 + cupom: frete usa subtotal antes do desconto 
+    [api] › tests\api\calculo-carrinho.spec.ts:122:7 › Cálculo do carrinho — itens e quantidades (CA10) › CT23 [BUG-002] quantidade 6 é rejeitada com QUANTIDADE_MAXIMA_EXCEDIDA @smoke 
+    [api] › tests\api\pedidos.spec.ts:69:7 › POST /api/pedidos — cupom, itens e quantidade › CT23 [BUG-002] quantidade 6 no pedido: QUANTIDADE_MAXIMA_EXCEDIDA (CA10 vale na API) 
+    [ui] › tests\ui\carrinho.spec.ts:92:7 › Carrinho — frete › CT13 [BUG-001] CA06 subtotal exatamente R$ 200,00 tem frete grátis @smoke 
+    [ui] › tests\ui\carrinho.spec.ts:99:7 › Carrinho — frete › CT16 [BUG-001] CA08 frete grátis considera o subtotal antes do desconto 
+  77 passed (31.7s)
+
+To open last HTML report run:
+
+  npx playwright show-report
+
+PS C:\Users\Daniel\Desktop\verzel-qa-test\automacao> 
